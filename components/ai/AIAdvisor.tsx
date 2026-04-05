@@ -208,18 +208,18 @@ export function AIAdvisor({ isOpen, onClose }: AIAdvisorProps) {
               "w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0",
               message.role === "assistant" 
                 ? "bg-primary-100 text-primary-600" 
-                : "bg-gray-200 text-gray-600"
+                : "bg-blue-500 text-white"
             )}>
               {message.role === "assistant" ? <Bot size={16} /> : <User size={16} />}
             </div>
-            <div className={cn(
-              "max-w-[80%] rounded-2xl p-3",
-              message.role === "assistant" 
-                ? "bg-white shadow-sm" 
-                : "bg-primary-600 text-white"
-            )}>
-              <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-            </div>
+              <div className={cn(
+                "max-w-[80%] rounded-2xl p-3",
+                message.role === "assistant" 
+                  ? "bg-white shadow-sm" 
+                  : "bg-blue-500 text-white"
+              )}>
+                <p className="text-sm whitespace-pre-wrap text-black">{message.content}</p>
+              </div>
           </div>
         ))}
 
