@@ -51,15 +51,15 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-400">
                 <Mail size={18} />
-                <span>support@globalstudentapply.com</span>
+                <span> mostafa171nn@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <Phone size={18} />
-                <span>+1 (555) 123-4567</span>
+                <span>01111695090</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin size={18} />
-                <span>123 Education Street, New York, NY 10001</span>
+                <span>el 7y el 3asher,nasr city, egypt</span>
               </div>
             </div>
           </div>
