@@ -7,6 +7,7 @@ import { ScholarshipCard, ScholarshipFilters } from "@/components/scholarships/S
 import { scholarships, egyptianUniversities, availableMajors } from "@/data/mockData";
 import { Scholarship } from "@/types";
 import { Search, GraduationCap, Filter } from "lucide-react";
+import { DarkModeProvider } from "@/hooks/useDarkMode";
 
 export default function ScholarshipsPage() {
   const [filteredScholarships, setFilteredScholarships] = useState<Scholarship[]>(scholarships);
@@ -81,32 +82,32 @@ export default function ScholarshipsPage() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="pt-32 pb-16 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-green-50 to-blue-50 dark:from-slate-800 dark:to-slate-900">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 dark:text-white">
               Scholarships in <span className="gradient-text">Egypt</span>
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-300">
               Discover scholarships for international students to study at top Egyptian universities
             </p>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-white rounded-2xl p-6 shadow-card text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 ">
+            <div className="card text-center dark:bg-black">
               <div className="text-3xl font-bold gradient-text mb-1">{totalScholarships}</div>
               <p className="text-sm text-gray-500">Total Scholarships</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-card text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-black">
               <div className="text-3xl font-bold text-green-600 mb-1">{fullScholarships}</div>
               <p className="text-sm text-gray-500">Full Funding</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-card text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-black">
               <div className="text-3xl font-bold text-yellow-600 mb-1">{partialScholarships}</div>
               <p className="text-sm text-gray-500">Partial Funding</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-card text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-black">
               <div className="text-3xl font-bold text-blue-600 mb-1">{activeScholarships}</div>
               <p className="text-sm text-gray-500">Active Applications</p>
             </div>
@@ -128,10 +129,10 @@ export default function ScholarshipsPage() {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container-custom">
+      <section className="py-16 ">
+        <div className="container-custom ">
           {/* Filters */}
-          <ScholarshipFilters
+          <ScholarshipFilters 
             onFilterChange={handleFilterChange}
             universities={universities}
             majors={availableMajors}

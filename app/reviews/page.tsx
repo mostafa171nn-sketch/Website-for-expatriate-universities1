@@ -64,19 +64,19 @@ export default function ReviewsPage() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-secondary-50">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-slate-800 dark:to-slate-900">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 dark:text-white">
               Student <span className="gradient-text">Reviews</span>
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-300">
               Read authentic reviews from international students studying in Egypt
             </p>
           </div>
 
           {/* Rating Summary */}
-          <div className="bg-white rounded-2xl shadow-card p-6 mb-8">
+          <div className="bg-white rounded-2xl shadow-card p-6 mb-8 dark:bg-black">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center">
                 <div className="text-5xl font-bold gradient-text mb-2">{averageRating}</div>
@@ -118,7 +118,7 @@ export default function ReviewsPage() {
       <section className="py-16">
         <div className="container-custom">
           {/* Filters */}
-          <div className="bg-white rounded-2xl shadow-card p-6 mb-8">
+          <div className="bg-white rounded-2xl shadow-card p-6 mb-8 dark:bg-black">
             <div className="grid md:grid-cols-4 gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />

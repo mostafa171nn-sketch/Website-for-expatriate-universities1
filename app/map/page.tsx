@@ -18,18 +18,18 @@ export default function MapPage() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="pt-24 pb-8 bg-gradient-to-br from-blue-50 to-green-50">
+      <section className="pt-24 pb-8 bg-gradient-to-br from-blue-50 to-green-50 dark:from-slate-800 dark:to-slate-900">
         <div className="container-custom">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 dark:text-white ">
                 Interactive <span className="gradient-text">Map</span>
               </h1>
               <p className="text-gray-600">
                 Explore universities across Egypt
               </p>
             </div>
-            <div className="flex items-center gap-2 bg-white rounded-xl p-1 shadow-card">
+            <div className="flex items-center gap-2 bg-white rounded-xl p-1 shadow-card ">
               <button
                 onClick={() => setViewMode("map")}
                 className={cn(
@@ -69,26 +69,26 @@ export default function MapPage() {
                 <Link
                   key={uni.id}
                   href={`/universities/${uni.id}`}
-                  className="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  className="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border border-gray-100 dark:bg-gray-600 dark:border-gray-500"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
                       {uni.name.charAt(0)}
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 mb-1">{uni.name}</h3>
-                      <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                      <h3 className="font-semibold text-gray-900 mb-1 dark:text-white">{uni.name}</h3>
+                      <div className="flex items-center gap-2 text-sm text-gray-500 mb-2 dark:text-gray-300">
                         <MapPin size={14} />
                         <span>{uni.city}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         {uni.rating && (
-                          <span className="px-2 py-0.5 bg-yellow-100 text-yellow-700 text-xs rounded-full">
+                          <span className="px-2 py-0.5 bg-yellow-100 text-yellow-700 text-xs rounded-full dark:bg-yellow-700 dark:text-yellow-100">
                             ★ {uni.rating.averageRating.toFixed(1)}
                           </span>
                         )}
                         <span className={cn(
-                          "px-2 py-0.5 text-xs rounded-full",
+                          "px-2 py-0.5 text-xs rounded-full ",
                           uni.type === "public"
                             ? "bg-blue-100 text-blue-700"
                             : "bg-purple-100 text-purple-700"
@@ -98,14 +98,14 @@ export default function MapPage() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mt-4 line-clamp-2">
+                  <p className="text-sm text-gray-600 mt-4 line-clamp-2 dark:text-gray-300">
                     {uni.description}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {uni.programs.slice(0, 3).map((program) => (
                       <span
                         key={program}
-                        className="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded-full"
+                        className="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded-full dark:bg-primary-700 dark:text-primary-50"
                       >
                         {program}
                       </span>

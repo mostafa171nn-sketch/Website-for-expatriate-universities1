@@ -85,7 +85,7 @@ export default function LandingPage() {
       <Header />
 
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 hero-gradient opacity-10" />
+        <div className="absolute inset-0 hero-gradient opacity-10 " />
         <div className="absolute inset-0 pattern-grid" />
         
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-300/30 rounded-full blur-3xl" />
@@ -95,7 +95,7 @@ export default function LandingPage() {
         <div className="container-custom relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 dark:text-white">
                 Study in <span className="gradient-text">Egypt</span>
               </h1>
               <p className="hero-desc text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
@@ -112,33 +112,33 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="hero-image relative">
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl" />
+            <div className="hero-image relative ">
+              <div className="relative w-full aspect-square max-w-lg mx-auto ">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl " />
                 <div className="relative p-8">
-                  <div className="floating-card absolute top-4 left-4 bg-white rounded-2xl p-4 shadow-lg">
+                <div className="floating-card absolute top-4 left-4 dark:bg-slate-800 bg-white rounded-2xl p-4 shadow-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl">🏛️</div>
+                      <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-xl flex items-center justify-center text-2xl">🏛️</div>
                       <div>
-                        <p className="font-semibold text-gray-900">Cairo University</p>
-                        <p className="text-sm text-gray-500">Giza</p>
+                        <p className="font-semibold text-[var(--text-primary)]">Cairo University</p>
+                        <p className="text-sm text-[var(--text-secondary)]">Giza</p>
                       </div>
                     </div>
                   </div>
-                  <div className="floating-card absolute top-32 right-4 bg-white rounded-2xl p-4 shadow-lg">
+                  <div className="floating-card absolute top-32 right-4 bg-white rounded-2xl p-4 shadow-lg dark:bg-slate-800">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl">🎓</div>
                       <div>
-                        <p className="font-semibold text-gray-900">AUC</p>
+                        <p className="font-semibold text-gray-900 dark:text-white">AUC</p>
                         <p className="text-sm text-gray-500">Cairo</p>
                       </div>
                     </div>
                   </div>
-                  <div className="floating-card absolute bottom-20 left-8 bg-white rounded-2xl p-4 shadow-lg">
+                  <div className="floating-card absolute top-60 left-8 bg-white rounded-2xl p-4 shadow-lg dark:bg-slate-800 ">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl">📚</div>
                       <div>
-                        <p className="font-semibold text-gray-900">Alexandria University</p>
+                        <p className="font-semibold text-gray-900 dark:text-white">Alexandria University</p>
                         <p className="text-sm text-gray-500">Alexandria</p>
                       </div>
                     </div>
@@ -168,10 +168,10 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="section bg-gray-50">
+      <section className="section bg-gray-50 dark:bg-slate-900">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-white">
               Why Choose <span className="gradient-text">Study in Egypt</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -183,23 +183,23 @@ export default function LandingPage() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="scroll-animate bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300"
+                className="scroll-animate bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 dark:bg-black"
               >
                 <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 dark:text-white">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section bg-white">
+      <section className="section bg-white dark:bg-slate-900">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-white">
               Top <span className="gradient-text">Universities</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -207,14 +207,14 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {topUniversities.map((uni, index) => (
               <div
                 key={index}
                 className="scroll-animate bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center text-white font-bold text-xl">
+                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center text-white font-bold text-xl ">
                     {uni.name.charAt(0)}
                   </div>
                   <div>
@@ -294,11 +294,11 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="section bg-white">
+      <section className="section bg-white dark:bg-slate-900">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 dark:text-white">
                 Ready to Start Your <span className="gradient-text">Journey</span>?
               </h2>
               <p className="text-gray-600 mb-8 text-lg">

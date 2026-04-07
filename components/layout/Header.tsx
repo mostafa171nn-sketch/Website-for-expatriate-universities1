@@ -26,7 +26,7 @@ export const Header = () => {
   const { language, setLanguage, t } = useTranslation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 dark:border-slate-800 border-b border-gray-100 dark:border-slate-800">
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2">
@@ -52,10 +52,11 @@ export const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-gray-600 dark:text-slate-300"
               >
                 <Globe size={18} className="text-gray-600" />
-                <span className="text-sm font-medium text-gray-600">{language.flag}</span>
+                <span className="text-sm font-medium text-gray-600 dark:text-slate-300">{language.flag}</span>
+
               </button>
               
               {langMenuOpen && (
@@ -66,8 +67,9 @@ export const Header = () => {
                       onClick={() => { setLanguage(lang.code); setLangMenuOpen(false); }}
                       className="w-full flex items-center gap-2 px-4 py-2 hover:bg-gray-50 transition-colors text-left"
                     >
-                      <span className="text-xs font-bold text-gray-600">{lang.flag}</span>
-                      <span className="text-sm text-gray-700">{lang.name}</span>
+                  <span className="text-xs font-bold text-gray-600 dark:text-slate-300">{lang.flag}</span>
+                      <span className="text-sm text-gray-700 dark:text-slate-200">{lang.name}</span>
+
                     </button>
                   ))}
                 </div>

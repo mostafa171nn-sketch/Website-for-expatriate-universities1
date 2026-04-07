@@ -41,7 +41,7 @@ export function ScholarshipCard({ scholarship, onSave, isSaved = false }: Schola
 
   return (
     <div className={cn(
-      "bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border border-gray-100",
+      "card hover:shadow-lg transition-all duration-300",
       isDeadlinePassed() && "opacity-75"
     )}>
       <div className="flex items-start justify-between mb-4">

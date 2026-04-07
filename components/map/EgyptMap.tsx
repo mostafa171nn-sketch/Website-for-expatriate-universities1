@@ -100,9 +100,9 @@ export function EgyptMap({ onUniversitySelect }: EgyptMapProps) {
     : filteredUniversities;
 
   return (
-    <div className="relative w-full h-[600px] bg-gray-100 rounded-2xl overflow-hidden">
+    <div className="relative w-full h-[600px] bg-gray-100 rounded-2xl overflow-hidden ">
       {/* Map Background */}
-      <div ref={mapRef} className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50">
+      <div ref={mapRef} className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 dark:from-slate-600 dark:to-slate-900">
         {/* SVG Map of Egypt */}
         <svg viewBox="0 0 400 450" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
           <defs>
@@ -155,7 +155,7 @@ export function EgyptMap({ onUniversitySelect }: EgyptMapProps) {
               <g
                 key={uni.id}
                 onClick={() => setSelectedUniversity(uni)}
-                className="cursor-pointer"
+                className="cursor-pointer "
                 transform={`translate(${Math.max(30, Math.min(370, x))}, ${Math.max(30, Math.min(400, y))})`}
               >
                 <circle

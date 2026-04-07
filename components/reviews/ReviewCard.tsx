@@ -19,14 +19,14 @@ export function ReviewCard({ review }: ReviewCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border border-gray-100">
+    <div className="card hover:shadow-lg transition-all duration-300 dark:bg-black">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-semibold text-lg">
+          <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-black font-semibold text-lg">
             {review.userName.charAt(0).toUpperCase()}
           </div>
           <div>
-            <h4 className="font-semibold text-gray-900">{review.userName}</h4>
+            <h4 className="font-semibold text-[var(--text-primary)] dark:text-white">{review.userName}</h4>
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <MapPin size={14} />
               <span>{review.userCountry}</span>
@@ -40,18 +40,18 @@ export function ReviewCard({ review }: ReviewCardProps) {
       </div>
 
       <div className="mb-4">
-        <p className="text-sm text-primary-600 font-medium mb-2">
+          <p className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-2">
           {review.universityName}
         </p>
         <StarRating rating={review.rating} readonly size="sm" />
       </div>
 
-      <p className="text-gray-600 mb-4 leading-relaxed">
+      <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
         {review.reviewText}
       </p>
 
       <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-        <button className="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 transition-colors">
+        <button className="flex items-center gap-2 text-sm text-[var(--text-secondary)] dark:hover:text-primary-400 transition-colors">
           <ThumbsUp size={16} />
           <span>Helpful ({review.helpful || 0})</span>
         </button>
@@ -99,7 +99,7 @@ export function ReviewForm({ universityId, universityName, onSubmit, onCancel }:
 
   return (
     <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 shadow-card">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+      <h3 className="text-lg font-semibold text-black mb-4">
         Write a Review for {universityName}
       </h3>
 

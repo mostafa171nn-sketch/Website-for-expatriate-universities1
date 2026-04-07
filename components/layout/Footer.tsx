@@ -34,7 +34,7 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+<footer className="bg-gray-50 dark:bg-slate-900 text-[var(--text-primary)]">
       <div className="container-custom py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
@@ -44,12 +44,12 @@ export const Footer = () => {
               </div>
               <span className="text-xl font-bold">Global Student Apply</span>
             </Link>
-            <p className="text-gray-400 mb-6 max-w-sm">
+            <p className="text-[var(--text-secondary)] mb-6 max-w-sm dark:text-slate-400">
               Your trusted platform for international student university applications. 
               We help students achieve their dream of studying abroad.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-400">
+              <div className="flex items-center gap-3 text-[var(--text-secondary)] dark:text-slate-400">
                 <Mail size={18} />
                 <span> mostafa171nn@gmail.com</span>
               </div>
@@ -65,13 +65,13 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[var(--text-primary)]">Quick Links</h3>
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] dark:hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
