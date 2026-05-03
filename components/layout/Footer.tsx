@@ -44,10 +44,7 @@ export const Footer = () => {
               </div>
               <span className="text-xl font-bold">Global Student Apply</span>
             </Link>
-            <p className="text-[var(--text-secondary)] mb-6 max-w-sm dark:text-slate-400">
-              Your trusted platform for international student university applications. 
-              We help students achieve their dream of studying abroad.
-            </p>
+           
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-[var(--text-secondary)] dark:text-slate-400">
                 <Mail size={18} />
@@ -115,9 +112,7 @@ export const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Global Student Apply. All rights reserved.
-            </p>
+           
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
                 <a
