@@ -51,52 +51,52 @@ export default function AIAdvisorPage() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <Header />
 
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 via-purple-50 to-secondary-50">
-        <div className="container-custom">
+      <section className="pt-32 pb-16 bg-gradient-to-br  via-purple-50  dark:bg-slate-900">
+        <div className="container-custom ">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-primary rounded-2xl mb-6">
               <MessageCircle className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 dark:text-white">
               AI University <span className="gradient-text">Advisor</span>
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
               Let our intelligent advisor help you find the perfect Egyptian university based on your profile and preferences
             </p>
           </div>
 
           {/* Features */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-1 2">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 dark:bg-slate-800 "
               >
-                <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-primary-600" />
+                <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 ">
+                  <feature.icon className="w-6 h-6 text-primary-600 " />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600">{feature.description}</p>
+                <h3 className="font-semibold text-gray-900 mb-2 dark:text-slate-300 ">{feature.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-slate-400 ">{feature.description}</p>
               </div>
             ))}
           </div>
 
           {/* How It Works */}
-          <div className="bg-white rounded-2xl shadow-card p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+          <div className="bg-white rounded-2xl shadow-card p-8 dark:bg-slate-800 mt-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center dark:text-slate-300">
               How It Works
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 ">
               {steps.map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                     {step.number}
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-sm text-gray-600">{step.description}</p>
+                  <h3 className="font-semibold text-gray-900 mb-2 dark:text-slate-300">{step.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-slate-400">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -105,47 +105,47 @@ export default function AIAdvisorPage() {
       </section>
 
       {/* Chat Demo Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-slate-800">
         <div className="container-custom">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 dark:text-slate-300">
               Try the AI Advisor Now
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-slate-400">
               Click the chat button to start your personalized university search
             </p>
           </div>
 
           {/* Preview Chat */}
-          <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-card overflow-hidden">
-            <div className="bg-gradient-primary p-4">
+          <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-card overflow-hidden dark:bg-slate-900" >
+            <div className="bg-gradient-primary p-4 ">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center ">
+                  <MessageCircle className="w-6 h-6 text-white " />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">AI University Advisor</h3>
+                  <h3 className="text-white font-semibold ">AI University Advisor</h3>
                   <p className="text-white/80 text-xs">Online</p>
                 </div>
               </div>
             </div>
             <div className="p-6 space-y-4 max-h-[400px] overflow-y-auto">
               <div className="flex gap-3">
-                <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 flex-shrink-0">
+                <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 flex-shrink-0 ">
                   <MessageCircle size={16} />
                 </div>
-                <div className="bg-gray-100 rounded-2xl rounded-tl-none p-3 max-w-[80%]">
-                  <p className="text-sm text-gray-800">
+                <div className="bg-gray-100 rounded-2xl rounded-tl-none p-3 max-w-[80%] dark:bg-slate-800">
+                  <p className="text-sm text-gray-800 dark:text-slate-300">
                     Hello! I&apos;m your AI University Advisor for Egypt. I&apos;ll help you find the perfect university based on your preferences. What major do you want to study?
                   </p>
                 </div>
               </div>
               <div className="flex gap-3 flex-row-reverse">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 flex-shrink-0">
-                  <span className="text-xs">You</span>
+                  <span className="text-xs ">You</span>
                 </div>
                 <div className="bg-primary-600 text-white rounded-2xl rounded-tr-none p-3 max-w-[80%]">
-                  <p className="text-sm">
+                  <p className="text-sm dark:text-slate-300">
                     I&apos;m interested in Engineering
                   </p>
                 </div>
@@ -154,8 +154,8 @@ export default function AIAdvisorPage() {
                 <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 flex-shrink-0">
                   <MessageCircle size={16} />
                 </div>
-                <div className="bg-gray-100 rounded-2xl rounded-tl-none p-3 max-w-[80%]">
-                  <p className="text-sm text-gray-800">
+                <div className="bg-gray-100 rounded-2xl rounded-tl-none p-3 max-w-[80%] dark:bg-slate-800">
+                  <p className="text-sm text-gray-800 dark:text-slate-300">
                     Great choice! Engineering is a popular field in Egypt. In which city would you prefer to study?
                   </p>
                 </div>
@@ -175,17 +175,17 @@ export default function AIAdvisorPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-900">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 dark:text-slate-300">
               Why Use Our AI Advisor?
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-slate-300">
               Get personalized recommendations from our intelligent system
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto dark:text-slate-300">
             {[
               "Save time on research",
               "Get unbiased recommendations",

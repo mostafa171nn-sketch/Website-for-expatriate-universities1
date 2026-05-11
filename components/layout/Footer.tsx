@@ -34,7 +34,7 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-<footer className="bg-gray-50 dark:bg-slate-900 text-[var(--text-primary)]">
+<footer className="bg-gray-200 dark:bg-slate-800 text-[var(--text-primary)] ">
       <div className="container-custom py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">

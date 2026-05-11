@@ -33,15 +33,15 @@ export const Header = () => {
             <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">Study in Egypt</span>
+            <span className="text-xl font-bold text-gray-900 dark:text-white">Study in Egypt</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-6 ">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary-600 ${pathname === item.href ? "text-primary-600" : "text-gray-600"}`}
+                className={` dark:text-white dark:hover:text-primary-600 text-sm font-medium transition-colors hover:text-primary-600 ${pathname === item.href ? "text-primary-600" : "text-gray-600"}`}
               >
                 {item.name}
               </Link>

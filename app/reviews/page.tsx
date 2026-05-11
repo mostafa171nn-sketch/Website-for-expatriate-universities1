@@ -76,7 +76,7 @@ export default function ReviewsPage() {
           </div>
 
           {/* Rating Summary */}
-          <div className="bg-white rounded-2xl shadow-card p-6 mb-8 dark:bg-black">
+          <div className="bg-white rounded-2xl shadow-card p-6 mb-8  dark:bg-slate-900">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center">
                 <div className="text-5xl font-bold gradient-text mb-2">{averageRating}</div>
@@ -118,7 +118,7 @@ export default function ReviewsPage() {
       <section className="py-16">
         <div className="container-custom">
           {/* Filters */}
-          <div className="bg-white rounded-2xl shadow-card p-6 mb-8 dark:bg-black">
+          <div className="bg-white rounded-2xl shadow-card p-6 mb-8  dark:bg-slate-900">
             <div className="grid md:grid-cols-4 gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -145,7 +145,7 @@ export default function ReviewsPage() {
               <select
                 value={minRating.toString()}
                 onChange={(e) => setMinRating(Number(e.target.value))}
-                className="input-field"
+                className="input-field "
               >
                 <option value="0">All Ratings</option>
                 <option value="5">5 Stars Only</option>
@@ -164,18 +164,18 @@ export default function ReviewsPage() {
           </div>
 
           {/* Reviews Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 ">
             {filteredReviews.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}
           </div>
 
           {filteredReviews.length === 0 && (
-            <div className="text-center py-16">
+            <div className="text-center py-16 ">
               <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <User className="w-10 h-10 text-gray-400" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 ">
                 No reviews found
               </h3>
               <p className="text-gray-600">

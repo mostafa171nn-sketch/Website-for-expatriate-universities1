@@ -96,9 +96,9 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 dark:text-white">
-                Study in <span className="gradient-text">Egypt</span>
+                Study in <span className="gradient-text dark:text-white">Egypt</span>
               </h1>
-              <p className="hero-desc text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+              <p className="hero-desc text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0 dark:text-white">
                 Your gateway to world-class education in Egypt. Discover top universities, 
                 read authentic reviews, and find scholarships - all in one place.
               </p>
@@ -114,11 +114,11 @@ export default function LandingPage() {
 
             <div className="hero-image relative ">
               <div className="relative w-full aspect-square max-w-lg mx-auto ">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl " />
+                <div className="absolute inset-0 bg-gradient-to-br  rounded-3xl " />
                 <div className="relative p-8">
-                <div className="floating-card absolute top-4 left-4 dark:bg-slate-800 bg-white rounded-2xl p-4 shadow-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-xl flex items-center justify-center text-2xl">🏛️</div>
+                <div className="floating-card absolute top-4 left-4 dark:bg-slate-800 bg-white rounded-2xl p-4 shadow-lg ">
+                    <div className="flex items-center gap-3 ">
+                      <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-xl flex items-center justify-center text-2xl ">🏛️</div>
                       <div>
                         <p className="font-semibold text-[var(--text-primary)]">Cairo University</p>
                         <p className="text-sm text-[var(--text-secondary)]">Giza</p>
@@ -126,8 +126,8 @@ export default function LandingPage() {
                     </div>
                   </div>
                   <div className="floating-card absolute top-32 right-4 bg-white rounded-2xl p-4 shadow-lg dark:bg-slate-800">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl">🎓</div>
+                    <div className="flex items-center gap-3 ">
+                      <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl ">🎓</div>
                       <div>
                         <p className="font-semibold text-gray-900 dark:text-white">AUC</p>
                         <p className="text-sm text-gray-500">Cairo</p>
@@ -150,8 +150,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="container-custom">
+      <section className="py-16 bg-white dark:bg-slate-800 ">
+        <div className="container-custom ">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: "15+", label: "Universities" },
@@ -161,7 +161,7 @@ export default function LandingPage() {
             ].map((stat, index) => (
               <div key={index} className="stat-item text-center">
                 <p className="text-4xl md:text-5xl font-bold gradient-text">{stat.number}</p>
-                <p className="text-gray-600 mt-2">{stat.label}</p>
+                <p className="text-gray-600 mt-2 dark:text-white">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -174,7 +174,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-white">
               Why Choose <span className="gradient-text">Study in Egypt</span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
               We help international students discover and apply to Egyptian universities
             </p>
           </div>
@@ -183,12 +183,12 @@ export default function LandingPage() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="scroll-animate bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 dark:bg-black"
+                className="scroll-animate bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 dark:bg-slate-800"
               >
                 <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 dark:text-white">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 dark:text-gray-400">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -197,9 +197,9 @@ export default function LandingPage() {
       </section>
 
       <section className="section bg-white dark:bg-slate-900">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-white">
+        <div className="container-custom ">
+          <div className="text-center mb-16 ">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-white ">
               Top <span className="gradient-text">Universities</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -211,21 +211,21 @@ export default function LandingPage() {
             {topUniversities.map((uni, index) => (
               <div
                 key={index}
-                className="scroll-animate bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border border-gray-100"
+                className="scroll-animate bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border border-gray-100 dark:bg-slate-800 dark:border-slate-800"
               >
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-4 ">
                   <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center text-white font-bold text-xl ">
                     {uni.name.charAt(0)}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">{uni.name}</h3>
-                    <p className="text-sm text-gray-500 flex items-center gap-1">
+                    <h3 className="font-semibold text-gray-900 dark:text-white">{uni.name}</h3>
+                    <p className="text-sm text-gray-500 flex items-center gap-1 dark:text-gray-400">
                       <MapPin size={12} /> {uni.city}
                     </p>
                   </div>
                 </div>
                 {uni.rating && (
-                  <div className="mb-3">
+                  <div className="mb-3 ">
                     <RatingDisplay 
                       rating={uni.rating.averageRating} 
                       totalReviews={uni.rating.totalReviews}
@@ -233,7 +233,7 @@ export default function LandingPage() {
                     />
                   </div>
                 )}
-                <p className="text-sm text-gray-600 line-clamp-2 mb-4">
+                <p className="text-sm text-gray-600 line-clamp-2 mb-4 dark:text-gray-400">
                   {uni.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -301,25 +301,25 @@ export default function LandingPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 dark:text-white">
                 Ready to Start Your <span className="gradient-text">Journey</span>?
               </h2>
-              <p className="text-gray-600 mb-8 text-lg">
+              <p className="text-gray-600 mb-8 text-lg dark:text-gray-400">
                 Join thousands of international students who have successfully applied to 
                 Egyptian universities through our platform.
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-4  dark:text-white">
                 {[
                   "Browse top Egyptian universities",
                   "Read authentic student reviews",
                   "Find scholarships and funding",
                   "Get AI-powered recommendations",
                 ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3">
+                  <li key={index} className="flex items-center gap-3 ">
                     <CheckCircle className="w-5 h-5 text-secondary-500" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
               <div className="mt-8">
-                <Link href="/universities" className="btn-primary inline-flex items-center gap-2">
+                <Link href="/universities" className="btn-primary inline-flex items-center gap-2 ">
                   Get Started <ArrowRight size={20} />
                 </Link>
               </div>

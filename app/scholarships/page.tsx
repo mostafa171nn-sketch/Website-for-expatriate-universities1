@@ -95,19 +95,19 @@ export default function ScholarshipsPage() {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 ">
-            <div className="card text-center dark:bg-black">
+            <div className="card text-center dark:bg-slate-800">
               <div className="text-3xl font-bold gradient-text mb-1">{totalScholarships}</div>
               <p className="text-sm text-gray-500">Total Scholarships</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-black">
+            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-slate-800">
               <div className="text-3xl font-bold text-green-600 mb-1">{fullScholarships}</div>
               <p className="text-sm text-gray-500">Full Funding</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-black">
+            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-slate-800">
               <div className="text-3xl font-bold text-yellow-600 mb-1">{partialScholarships}</div>
               <p className="text-sm text-gray-500">Partial Funding</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-black">
+            <div className="bg-white rounded-2xl p-6 shadow-card text-center dark:bg-slate-800">
               <div className="text-3xl font-bold text-blue-600 mb-1">{activeScholarships}</div>
               <p className="text-sm text-gray-500">Active Applications</p>
             </div>
@@ -115,21 +115,21 @@ export default function ScholarshipsPage() {
 
           {/* Search */}
           <div className="max-w-2xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <div className="relative ">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 " />
               <input
                 type="text"
-                placeholder="Search scholarships by name, university, or major..."
+                placeholder="Search scholarships by name, university, or major... "
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="input-field pl-12 py-4"
+                className="input-field pl-12 py-4 "
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 ">
+      <section className="py-16 dark:bg-slate-800 ">
         <div className="container-custom ">
           {/* Filters */}
           <ScholarshipFilters 
@@ -139,28 +139,28 @@ export default function ScholarshipsPage() {
           />
 
           {/* Results count */}
-          <div className="mt-6 mb-4">
-            <p className="text-gray-600">
-              Showing <span className="font-semibold text-gray-900">{filteredScholarships.length}</span> scholarships
+          <div className="mt-6 mb-4 ">
+            <p className="text-white ">
+              Showing <span className="font-semibold text-gray-400 ">{filteredScholarships.length}</span> scholarships
             </p>
           </div>
 
           {/* Scholarships Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 dark:bg-slate-800">
             {filteredScholarships.map((scholarship) => (
               <ScholarshipCard key={scholarship.id} scholarship={scholarship} />
             ))}
           </div>
 
           {filteredScholarships.length === 0 && (
-            <div className="text-center py-16">
-              <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="w-10 h-10 text-gray-400" />
+            <div className="text-center py-16 ">
+              <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 ">
+                <GraduationCap className="w-10 h-10 text-gray-400 " />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 dark:text-white">
                 No scholarships found
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-white" >
                 Try adjusting your filters or search criteria
               </p>
             </div>

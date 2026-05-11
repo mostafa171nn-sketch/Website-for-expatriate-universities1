@@ -158,17 +158,17 @@ export function ScholarshipFilters({ onFilterChange, universities, majors }: Sch
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-card">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Filter Scholarships</h3>
+    <div className="bg-white rounded-2xl p-6 shadow-card  dark:bg-slate-900">
+      <h3 className="text-lg font-semibold text-gray-900 mb-4 dark:text-white">Filter Scholarships</h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2 dark:text-white">
             University
           </label>
           <select
             value={filters.university}
             onChange={(e) => handleFilterChange("university", e.target.value)}
-            className="input-field"
+            className="input-field dark:text-white"
           >
             <option value="">All Universities</option>
             {universities.map((uni) => (
@@ -178,7 +178,7 @@ export function ScholarshipFilters({ onFilterChange, universities, majors }: Sch
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2 dark:text-white">
             Major
           </label>
           <select
@@ -194,7 +194,7 @@ export function ScholarshipFilters({ onFilterChange, universities, majors }: Sch
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2 dark:text-white">
             Coverage
           </label>
           <select
@@ -209,7 +209,7 @@ export function ScholarshipFilters({ onFilterChange, universities, majors }: Sch
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2 dark:text-white" >
             Sort By
           </label>
           <select

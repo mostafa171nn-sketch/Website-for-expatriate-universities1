@@ -19,7 +19,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
   };
 
   return (
-    <div className="card hover:shadow-lg transition-all duration-300 dark:bg-black">
+    <div className="card hover:shadow-lg transition-all duration-300  dark:bg-slate-900 dark:border-slate-700">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-black font-semibold text-lg">
