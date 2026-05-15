@@ -122,7 +122,7 @@ export default function HomePage() {
             </Link>
             
             <div className="flex items-center gap-4">
-              <Link href="/universities" className="text-sm font-medium text-gray-600 hover:text-primary-600">
+              <Link href="/universities" className="text-sm font-medium text-gray-600 hover:text-primary-600 ">
                 Universities
               </Link>
               <Link href="/programs" className="text-sm font-medium text-gray-600 hover:text-primary-600">

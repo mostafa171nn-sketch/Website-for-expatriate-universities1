@@ -40,9 +40,9 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-white" />
+                <GraduationCap className="w-6 h-6 text-white " />
               </div>
-              <span className="text-xl font-bold">Global Student Apply</span>
+              <span className="text-xl font-bold " >Global Student Apply</span>
             </Link>
            
             <div className="space-y-3">
